@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Egy kanál méz reggel — és ami utána történik az agyban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#0d0d0d;color:#e0e0e0;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* === HERO === */
+.hero{position:relative;width:100%;max-height:420px;overflow:hidden}
+.hero img{width:100%;height:420px;object-fit:cover;cursor:pointer}
+.hero-grad{position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(transparent,#0d0d0d)}
+
+/* === CONTAINER === */
+.w{max-width:620px;margin:0 auto;padding:0 20px}
+
+/* === HEADLINE AREA === */
+.hl{padding:16px 0 6px;text-align:center}
+.hl-tag{display:inline-block;background:rgba(218,165,32,.12);color:#daa520;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:3px;border:1px solid rgba(218,165,32,.25);margin-bottom:10px}
+.hl h1{font-family:'Libre Baskerville',serif;font-size:23px;line-height:1.35;color:#fff;font-weight:700}
+.hl h1 em{color:#daa520;font-style:normal}
+.hl-sub{font-size:13px;color:#888;font-weight:300;margin-top:6px;line-height:1.5}
+
+/* === CTA PRINCIPAL === */
+.cta-main{margin:16px 0;padding:20px;background:linear-gradient(135deg,#daa520,#b8860b);border-radius:10px;text-align:center;box-shadow:0 8px 35px rgba(218,165,32,.2)}
+.cta-main h2{font-family:'Libre Baskerville',serif;font-size:17px;color:#0d0d0d;font-weight:700;margin-bottom:4px;line-height:1.3}
+.cta-main p{font-size:12px;color:rgba(13,13,13,.6);margin-bottom:12px;font-weight:300}
+.btn{display:inline-block;background:#0d0d0d;color:#daa520;padding:14px 44px;font-size:14px;font-weight:600;text-decoration:none;border-radius:6px;transition:all .25s;box-shadow:0 4px 15px rgba(0,0,0,.4);letter-spacing:.3px}
+.btn:hover{background:#fff;color:#0d0d0d;transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.cta-main small{display:block;margin-top:6px;font-size:8px;color:rgba(13,13,13,.35)}
+
+/* === BODY TEXT === */
+.txt{padding:14px 0}
+.txt p{font-size:14px;color:#bbb;font-weight:300;line-height:1.85;margin-bottom:12px}
+.txt strong{color:#fff;font-weight:500}
+.txt em{color:#daa520;font-style:normal;font-weight:400}
+
+/* === QUESTION BREAK === */
+.qbreak{text-align:center;padding:10px 0;margin:4px 0}
+.qbreak h3{font-family:'Libre Baskerville',serif;font-size:18px;color:#fff;font-weight:700;line-height:1.35}
+.qbreak h3 em{color:#daa520;font-style:normal}
+
+/* === IMAGE + TESTIMONIAL === */
+.testi{margin:14px 0;border-radius:8px;overflow:hidden;position:relative}
+.testi img{width:100%;cursor:pointer;transition:transform .3s}.testi img:hover{transform:scale(1.02)}
+.testi-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(transparent,rgba(0,0,0,.85) 30%)}
+.testi-text{font-family:'Libre Baskerville',serif;font-size:13px;color:#eee;font-style:italic;line-height:1.55;margin-bottom:4px}
+.testi-name{font-family:'Outfit',sans-serif;font-size:10px;color:#daa520;font-weight:500;font-style:normal}
+
+/* === REVEAL LIST === */
+.reveal{margin:14px 0;background:#141414;border-radius:8px;overflow:hidden;border:1px solid #222}
+.reveal-title{padding:12px 16px;font-family:'Libre Baskerville',serif;font-size:13px;color:#daa520;font-weight:700;border-bottom:1px solid #222}
+.rev-item{padding:10px 16px;border-bottom:1px solid #1a1a1a;display:flex;gap:10px;align-items:flex-start}
+.rev-item:last-child{border-bottom:none}
+.rev-icon{color:#daa520;font-size:14px;flex-shrink:0;margin-top:1px}
+.rev-text{font-size:12.5px;color:#bbb;font-weight:300;line-height:1.55}
+.rev-text strong{color:#fff;font-weight:500}
+
+/* === DARK QUOTE === */
+.dquote{margin:14px 0;padding:14px 18px;border-left:3px solid #daa520;background:#141414;border-radius:0 6px 6px 0}
+.dquote p{font-family:'Libre Baskerville',serif;font-size:13px;color:#ddd;font-style:italic;line-height:1.6;margin:0}
+
+/* === CTA BOTTOM === */
+.cta-bot{margin:16px 0;padding:20px;background:#141414;border-radius:8px;text-align:center;border:1px solid #daa520}
+.cta-bot h3{font-family:'Libre Baskerville',serif;font-size:15px;color:#fff;margin-bottom:3px;font-weight:700}
+.cta-bot p{font-size:11px;color:#777;margin-bottom:12px;font-weight:300}
+.cta-bot .btn{background:#daa520;color:#0d0d0d}
+.cta-bot .btn:hover{background:#fff;color:#0d0d0d}
+.cta-bot small{display:block;margin-top:6px;font-size:7.5px;color:#555}
+
+/* === DISCLAIMER === */
+.disc{font-size:8px;color:#555;margin:14px 0;padding:10px 12px;background:#111;border-radius:4px;line-height:1.6;border:1px solid #1a1a1a}
+
+/* === FOOTER === */
+footer{padding:16px 20px 30px;text-align:center;font-size:8px;color:#444}
+footer a{color:#daa520;text-decoration:none}footer a:hover{text-decoration:underline}
+
+@media(max-width:600px){
+.hl h1{font-size:19px}
+.qbreak h3{font-size:16px}
+.cta-main h2{font-size:15px}
+.hero img{height:320px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO — dramatic spoon closeup -->
+<section class="hero">
+<a href="https://lp.ultrahypepro.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem13-honey-spoon-dark-closeup-YfoPpD2UddCDGZncesy2wR.webp" alt="Egy kanál méz dióval és fahéjjal"></a>
+<div class="hero-grad"></div>
+</section>
+
+<div class="w">
+
+<!-- HEADLINE -->
+<div class="hl">
+<span class="hl-tag">Új felfedezés · 2026</span>
+<h1>Egy kanál méz reggel — és ami utána történik <em>az agyban</em></h1>
+<p class="hl-sub">Egy egyszerű konyhai összetevő, amelyről kiderült, hogy nem úgy hat, ahogy gondolnánk.</p>
+</div>
+
+<!-- CTA PRINCIPAL -->
+<div class="cta-main">
+<h2>&#9654; Nézze meg, mit fedeztek fel a méz és az agy kapcsolatáról</h2>
+<p>Egy rövid videó, amely mindent megmagyaráz</p>
+<a href="https://lp.ultrahypepro.shop/preclick" class="btn">Videó megtekintése &rarr;</a>
+<small>Ingyenes tájékoztató tartalom · 3 perc</small>
+</div>
+
+<!-- BODY — curiosity hooks -->
+<div class="txt">
+<p>Ön is észrevette már, hogy egyre nehezebben emlékszik a nevekre? Hogy belép egy szobába, és <strong>elfelejti, miért ment oda?</strong></p>
+
+<p>A legtöbb ember azt gondolja, ez normális. <strong>De mi van, ha nem az?</strong></p>
+
+<p>Egy <strong>budapesti neurológus</strong> nemrég egy meglepő összefüggésre hívta fel a figyelmet. Egy <em>közönséges konyhai összetevő</em> — amelyet szinte mindenki ismer — <strong>egészen másképp hat az agyra</strong>, mint ahogy eddig gondolták.</p>
+</div>
+
+<!-- QUESTION BREAK -->
+<div class="qbreak">
+<h3>De miért pont <em>a méz?</em><br>És miért pont <em>így</em> kell fogyasztani?</h3>
+</div>
+
+<!-- BODY — more curiosity -->
+<div class="txt">
+<p>A válasz abban rejlik, <strong>hogyan</strong> és <strong>mivel együtt</strong> fogyasztjuk. Önmagában a méz csak egy édesítő. De ha <em>ezzel a három másik összetevővel</em> kombináljuk, és <strong>reggel, éhgyomorra</strong> vesszük be — valami egészen más történik.</p>
+
+<p>A <strong>Bükk-hegységi méhészek</strong> már generációk óta ismerik ezt a keveréket. De csak most, hogy a <strong>budapesti orvosok</strong> is megvizsgálták — <em>derült ki, miért működik.</em></p>
+</div>
+
+<!-- IMAGE + TESTIMONIAL -->
+<div class="testi">
+<a href="https://lp.ultrahypepro.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem13-hungarian-woman-thinking-BqzZWPGEypHbTa84c62i8H.webp" alt="Magyar nő gondolkodik"></a>
+<div class="testi-overlay">
+<p class="testi-text">„Három hónapja minden reggel ezzel kezdem a napot. Azóta nem keresem a szemüvegemet — mert emlékszem, hová tettem. A lányom azt mondta: 'Anya, te fiatalabb vagy, mint tavaly.'"</p>
+<p class="testi-name">— Kovács Erzsébet, 68 éves, Budapest, XIII. kerület</p>
+</div>
+</div>
+
+<!-- REVEAL LIST — what you'll learn -->
+<div class="reveal">
+<div class="reveal-title">Amit a videóból megtudhat:</div>
+<div class="rev-item">
+<span class="rev-icon">&#9670;</span>
+<div class="rev-text">Melyik az a <strong>„rejtett anyag"</strong> a mézben, amelyről a tudósok azt mondják: <strong>közvetlenül hat az agyi sejtekre</strong></div>
+</div>
+<div class="rev-item">
+<span class="rev-icon">&#9670;</span>
+<div class="rev-text">A <strong>3 másik összetevő</strong>, amely „aktiválja" a méz hatását — és amelyeket <strong>minden magyar konyhában</strong> megtalál</div>
+</div>
+<div class="rev-item">
+<span class="rev-icon">&#9670;</span>
+<div class="rev-text">Miért <strong>nem működik</strong>, ha a mézet teába keverve issza — és mi a <strong>helyes módszer</strong></div>
+</div>
+<div class="rev-item">
+<span class="rev-icon">&#9670;</span>
+<div class="rev-text">Az <strong>egyetlen időpont</strong> a nap folyamán, amikor a keverék a <strong>leghatékonyabb</strong> — és miért</div>
+</div>
+</div>
+
+<!-- DARK QUOTE -->
+<div class="dquote">
+<p>„Nem a méz a csoda. Hanem az, ami történik, amikor a megfelelő összetevőkkel, a megfelelő időben fogyasztjuk. Ez az, amit a legtöbb ember nem tud — és amit ebben a videóban elmagyarázunk."</p>
+</div>
+
+<!-- CTA BOTTOM -->
+<div class="cta-bot">
+<h3>Tudja meg a teljes receptet — lépésről lépésre</h3>
+<p>A pontos összetevők · A helyes arányok · A megfelelő időpont</p>
+<a href="https://lp.ultrahypepro.shop/preclick" class="btn">Videó megtekintése most &rarr;</a>
+<small>Ingyenes tájékoztató tartalom</small>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disc">
+<strong>Jogi nyilatkozat:</strong> Ez a cikk kizárólag tájékoztató jellegű, és nem minősül orvosi tanácsadásnak. Az étrend-kiegészítők nem helyettesítik a változatos étrendet és az egészséges életmódot. Az eredmények egyénenként eltérőek lehetnek. Mielőtt bármilyen változtatást eszközölne étrendjében, konzultáljon egészségügyi szakemberrel. A cikkben szereplő vélemények az olvasók személyes tapasztalatait tükrözik.
+</div>
+
+</div>
+
+<footer>
+<p><a href="privacy.html">Adatvédelem</a> &middot; <a href="terms.html">Felhasználási feltételek</a></p>
+<p style="margin-top:3px">© 2026 &middot; CNPJ: 64.765.493/0001-33</p>
+</footer>
+
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
+</script>
+<script type="text/javascript" src="https://lp.ultrahypepro.shop/pretrack.js?rtkcmpid=69e65ff13bab5180c0db0140"></script>
+</body>
+</html>
